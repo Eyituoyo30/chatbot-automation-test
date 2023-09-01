@@ -91,6 +91,10 @@ public class TestBase {
         jsExecutor = (JavascriptExecutor) driver;
     }
 
+    public WebDriver getDriver() {
+        return driver;
+    }
+
     @AfterMethod
     public void tearDown() {
         if (driver != null) {

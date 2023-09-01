@@ -68,11 +68,10 @@ public class HomePage extends PageBase {
         WebElement AuthSubmitBtn = getAuthSubmitBtn();
         waitForElementToBeClickable(AuthSubmitBtn);
         click(AuthSubmitBtn);
-        sleep(3);
+        sleep(5);
     }
 
     public void enterOTP(String otp) {
-        waitForElementVisibility(otpInput);
         enterText(otpInput, otp);
     }
 

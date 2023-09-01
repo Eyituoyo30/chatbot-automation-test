@@ -24,8 +24,10 @@ public class XtraValueTest extends TestBase {
         homepage.clickStartANewConversation();
         homepage.enterPhoneNumber(testDataProp.getProperty("phoneNumber8690"));
         homepage.clickAuthSubmitBtn();
+        sleep(10);
         homepage.enterOTP(OTP);
         homepage.clickOTPSubmitBtn();
+        sleep(10);
     }
 
     @Test(priority = 1, description = "Validate that User can purchase daily plan in XtraTalk More (Auto Renewal)")
@@ -34,6 +36,7 @@ public class XtraValueTest extends TestBase {
         initializer();
 
         xtraValueTestPage.typeChatMessage("buy data");
+        xtraValueTestPage.clickMessageSendBtn();
         xtraValueTestPage.findAndClickOption("Myself");
         xtraValueTestPage.findAndClickOption("Xtravalue(Data + Voice)");
         xtraValueTestPage.findAndClickOption("XtraTalk More");
